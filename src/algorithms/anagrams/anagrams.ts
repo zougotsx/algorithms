@@ -1,3 +1,5 @@
+// Solution #1
+
 export const anagrams = (stringA: string, stringB: string): boolean => {
   const aCharMap = buildCharMap(stringA);
   const bCharMap = buildCharMap(stringB);
@@ -26,3 +28,17 @@ const buildCharMap = (str: string) => {
 };
 
 anagrams('HELLO', 'elloh');
+
+// Solution #2
+
+export const anagramsSolTwo = (stringA: string, stringB: string): boolean => {
+  return cleanString(stringA) === cleanString(stringB);
+};
+
+const cleanString = (str: string) =>
+  str
+    .replace(/[^\w]/g, '')
+    .toLowerCase()
+    .split('')
+    .sort()
+    .join('');
