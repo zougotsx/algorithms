@@ -31,14 +31,15 @@ anagrams('HELLO', 'elloh');
 
 // Solution #2
 
-export const anagramsSolTwo = (stringA: string, stringB: string): boolean => {
-  return cleanString(stringA) === cleanString(stringB);
+export const anagramsSolTwo = (string1: string, string2: string): boolean => {
+  return cleanString(string1) === cleanString(string2);
 };
 
-const cleanString = (str: string) =>
-  str
+const cleanString = (str: string): string => {
+  return str
     .replace(/[^\w]/g, '')
     .toLowerCase()
     .split('')
     .sort()
     .join('');
+};
