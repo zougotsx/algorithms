@@ -5,7 +5,7 @@ export const vowels = (str: any): number => {
 
 export const vowelsSolTwo = (str: string): number => {
   let count = 0;
-  let checker = ['a', 'e', 'i', 'o', 'u'];
+  const checker = ['a', 'e', 'i', 'o', 'u'];
 
   for (let char of str.toLowerCase()) {
     if (checker.includes(char)) {

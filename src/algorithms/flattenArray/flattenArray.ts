@@ -1,28 +1,26 @@
 // Solution 1
 
-const nestedArray: any[] = [20, [50, 2, [90, 61]], [4, 7], 3];
+const notFlatArray = [1, 2, [3, 4, [5, 6]], [7, 8], 9];
 
-export const flattenArray = (array: any[]): number[] => {
-  const flatArray: number[] = [];
+export const flattenThis = (arr: any[]): any[] => {
+  const newArray: any[] = [];
 
-  array.forEach((item: number) => {
-    if (Array.isArray(item)) {
-      flatArray.push(...flattenArray(item));
+  arr.forEach(element => {
+    if (Array.isArray(element)) {
+      newArray.push(...flattenThis(element));
     } else {
-      flatArray.push(item);
+      newArray.push(element);
     }
   });
 
-  return flatArray;
+  return newArray;
 };
-
-flattenArray(nestedArray);
 
 // Solution 2
 
-const nestedArrayTwo = [[0, 1], [2, 3], [4, 5]];
+// const nestedArrayTwo = [[0, 1], [2, 3], [4, 5]];
 
-export const reduceArray = (arr: any[]) =>
-  arr.reduce((acumulator, currentValue) => acumulator.concat(currentValue), []);
+// export const reduceArray = (arr: any[]) =>
+//   arr.reduce((acumulator, currentValue) => acumulator.concat(currentValue), []);
 
-reduceArray(nestedArrayTwo);
+// reduceArray(nestedArrayTwo);

@@ -12,11 +12,7 @@ export const fibonacci = (num: number): number => {
 };
 
 // Solution #2 - Recursion
-
 export const fibRecursion = (num: number): number => {
-  if (num < 2) {
-    return num;
-  }
-
+  if (num < 2) return num;
   return fibRecursion(num - 1) + fibRecursion(num - 2);
 };

@@ -1,5 +1,5 @@
-export const fizzBuzz = (num: number): any => {
-  for (let i = 1; i < num; i++) {
+export const fizzBuzz = (num: number): void => {
+  for (let i = 0; i < num; i++) {
     if (i % 15 === 0) {
       console.log('FizzBuzz');
     } else if (i % 5 === 0) {
@@ -10,4 +10,4 @@ export const fizzBuzz = (num: number): any => {
       console.log(i);
     }
   }
-};
+}

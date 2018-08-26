@@ -3,9 +3,5 @@ export const palindrome = (str: string): boolean => {
     .split('')
     .reverse()
     .join('');
-  if (reversedString === str) {
-    return true;
-  } else {
-    return false;
-  }
+  return reversedString === str;
 };

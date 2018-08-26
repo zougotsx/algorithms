@@ -43,3 +43,5 @@ const cleanString = (str: string): string => {
     .sort()
     .join('');
 };
+
+anagramsSolTwo('true', 'asdf');
