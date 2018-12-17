@@ -1,9 +1,8 @@
 import { reverseString } from './reverseString';
+import { doesFuncExist } from '../doesFuncExist.test';
 
 describe('reverseString', () => {
-  test('To see if the function exists', () => {
-    expect(reverseString).toBeDefined();
-  });
+  doesFuncExist(reverseString);
 
   test('Takes a string and reverses it', () => {
     expect(reverseString('Hello')).toEqual('olleH');

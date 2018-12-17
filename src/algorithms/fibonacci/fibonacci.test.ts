@@ -1,9 +1,8 @@
 import { fibonacci, fibRecursion } from './fibonacci';
+import { doesFuncExist } from '../doesFuncExist.test';
 
 describe('fibonacci', () => {
-  test('To see if the function exists', () => {
-    expect(fibonacci).toBeDefined();
-  });
+  doesFuncExist(fibonacci);
 
   test('Adds the last two numbers of the fibonacci sequence and returns the final output as a number', () => {
     expect(fibonacci(4)).toBe(3);
@@ -11,9 +10,7 @@ describe('fibonacci', () => {
 });
 
 describe('fibRecursion', () => {
-  test('To see if the function exists', () => {
-    expect(fibRecursion).toBeDefined();
-  });
+  doesFuncExist(fibRecursion);
 
   test('Adds the last two numbers of the fibonacci sequence and returns the final output as a number', () => {
     expect(fibRecursion(4)).toBe(3);

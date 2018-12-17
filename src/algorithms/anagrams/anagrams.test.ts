@@ -1,9 +1,8 @@
 import { anagrams, anagramsSolTwo } from './anagrams';
+import { doesFuncExist } from '../doesFuncExist.test';
 
 describe('anagrams', () => {
-  test('To see if the function exists', () => {
-    expect(anagrams).toBeDefined();
-  });
+  doesFuncExist(anagrams);
 
   test('Returns false if the keys length of Character Map A does not equal Character Map B', () => {
     expect(anagrams('Hello', 'lleh')).toBe(false);
@@ -19,9 +18,7 @@ describe('anagrams', () => {
 });
 
 describe('anagramsSolTwo', () => {
-  test('To see if the function exists', () => {
-    expect(anagramsSolTwo).toBeDefined();
-  });
+  doesFuncExist(anagramsSolTwo);
 
   test('Returns false if strings are not anagrams of each other', () => {
     expect(anagramsSolTwo('goodbye', 'bye')).toBe(false);

@@ -1,9 +1,8 @@
 import { maxChar } from './maxChar';
+import { doesFuncExist } from '../doesFuncExist.test';
 
 describe('maxChar', () => {
-  test('To see if the function exists', () => {
-    expect(maxChar).toBeDefined();
-  });
+  doesFuncExist(maxChar);
 
   test('Returns the most common character in a string', () => {
     expect(maxChar('Hello')).toBe('l');

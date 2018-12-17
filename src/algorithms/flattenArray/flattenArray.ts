@@ -18,9 +18,8 @@ export const flattenThis = (arr: any[]): any[] => {
 
 // Solution 2
 
-// const nestedArrayTwo = [[0, 1], [2, 3], [4, 5]];
+const nestedArrayTwo = [[0, 1], [2, 3], [4, 5]];
 
-// export const reduceArray = (arr: any[]) =>
-//   arr.reduce((acumulator, currentValue) => acumulator.concat(currentValue), []);
+export const reduceArray = (arr: any[]) =>
+  arr.reduce((acumulator, currentValue) => acumulator.concat(currentValue), []);
 
-// reduceArray(nestedArrayTwo);

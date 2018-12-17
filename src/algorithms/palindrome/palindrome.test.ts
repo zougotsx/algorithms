@@ -1,9 +1,8 @@
 import { palindrome } from './palindrome';
+import { doesFuncExist } from '../doesFuncExist.test';
 
 describe('palindrome', () => {
-  test('To see if the function exists', () => {
-    expect(palindrome).toBeDefined();
-  });
+  doesFuncExist(palindrome);
 
   test('Returns true if the string matches the reversed string', () => {
     expect(palindrome('racecar')).toBe(true);

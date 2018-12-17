@@ -1,9 +1,8 @@
 import { reverseNumber } from './reverseNumber';
+import { doesFuncExist } from '../doesFuncExist.test';
 
 describe('reverseNumber', () => {
-  test('To see if the function exists', () => {
-    expect(reverseNumber).toBeDefined();
-  });
+  doesFuncExist(reverseNumber);
 
   test('It takes a number and reverses it', () => {
     expect(reverseNumber(-91)).toBe(-19);

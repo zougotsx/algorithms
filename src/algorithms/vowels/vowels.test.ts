@@ -1,9 +1,8 @@
 import { vowels, vowelsSolTwo } from './vowels';
+import { doesFuncExist } from '../doesFuncExist.test';
 
 describe('vowels', () => {
-  test('To see if the function exists', () => {
-    expect(vowels).toBeDefined();
-  });
+  doesFuncExist(vowels);
 
   test('Returns the number of vowels given in a string', () => {
     expect(vowels('Hello')).toBe(2);
@@ -11,9 +10,7 @@ describe('vowels', () => {
 });
 
 describe('vowelsSolTwo', () => {
-  test('To see if the function exists', () => {
-    expect(vowelsSolTwo).toBeDefined();
-  });
+  doesFuncExist(vowelsSolTwo);
 
   test('Returns the number of vowels given in a string', () => {
     expect(vowelsSolTwo('Hi There')).toBe(3);

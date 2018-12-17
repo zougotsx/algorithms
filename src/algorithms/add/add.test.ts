@@ -1,9 +1,8 @@
 import { add } from './add';
+import { doesFuncExist } from '../doesFuncExist.test';
 
 describe('add', () => {
-  test('To see if the function exists', () => {
-    expect(add).toBeDefined();
-  });
+  doesFuncExist(add);
 
   test('Takes two numbers and adds them', () => {
     expect(add(2, 2)).toBe(4);
