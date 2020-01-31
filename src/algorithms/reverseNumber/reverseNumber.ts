@@ -3,6 +3,6 @@ export const reverseNumber = (num: number): number => {
     .toString()
     .split('')
     .reverse()
-    .join('');
-  return parseInt(reversedNum) * Math.sign(num);
-};
+    .join('')
+  return parseInt(reversedNum) * Math.sign(num)
+}

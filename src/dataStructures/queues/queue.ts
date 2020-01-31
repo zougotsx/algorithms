@@ -1,23 +1,23 @@
 export class Queue {
-  data: any[];
+  data: any[]
 
   constructor() {
-    this.data = [];
+    this.data = []
   }
 
   add(record: any) {
-    this.data.unshift(record);
+    this.data.unshift(record)
   }
 
   remove() {
-    return this.data.pop();
+    return this.data.pop()
   }
 
   peek() {
-    return this.data[this.data.length - 1];
+    return this.data[this.data.length - 1]
   }
 }
 
-let newQueue = new Queue();
-newQueue.add(4);
-newQueue.remove();
+let newQueue = new Queue()
+newQueue.add(4)
+newQueue.remove()

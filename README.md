@@ -76,14 +76,11 @@ Then copy the `.babelrc` in this repo, or the below:
 
 ```json
 {
-    "presets": [
-        "@babel/env",
-        "@babel/typescript"
-    ],
-    "plugins": [
-        "@babel/proposal-class-properties",
-        "@babel/proposal-object-rest-spread"
-    ]
+  "presets": ["@babel/env", "@babel/typescript"],
+  "plugins": [
+    "@babel/proposal-class-properties",
+    "@babel/proposal-object-rest-spread"
+  ]
 }
 ```
 
@@ -125,8 +122,8 @@ Make sure that any files that contain JSX use the `.tsx` extension.
 To get going quickly, just rename `src/index.ts` to `src/index.tsx`, and add the following lines to the bottom:
 
 ```ts
-import React from 'react';
-export let z = <div>Hello world!</div>;
+import React from 'react'
+export let z = <div>Hello world!</div>
 ```
 
 ## Using Webpack
@@ -142,27 +139,29 @@ npm install --save-dev webpack babel-loader@8.0.0-beta.2
 Create a `webpack.config.js` at the root of this project with the following contents:
 
 ```js
-var path = require('path');
+var path = require('path')
 
 module.exports = {
-    // Change to your "entry-point".
-    entry: './src/index',
-    output: {
-        path: path.resolve(__dirname, 'dist'),
-        filename: 'app.bundle.js'
-    },
-    resolve: {
-        extensions: ['.ts', '.tsx', '.js', '.json']
-    },
-    module: {
-        rules: [{
-            // Include ts, tsx, and js files.
-            test: /\.(tsx?)|(js)$/,
-            exclude: /node_modules/,
-            loader: 'babel-loader',
-        }],
-    }
-};
+  // Change to your "entry-point".
+  entry: './src/index',
+  output: {
+    path: path.resolve(__dirname, 'dist'),
+    filename: 'app.bundle.js'
+  },
+  resolve: {
+    extensions: ['.ts', '.tsx', '.js', '.json']
+  },
+  module: {
+    rules: [
+      {
+        // Include ts, tsx, and js files.
+        test: /\.(tsx?)|(js)$/,
+        exclude: /node_modules/,
+        loader: 'babel-loader'
+      }
+    ]
+  }
+}
 ```
 
 ### Create a build task

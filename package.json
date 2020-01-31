@@ -22,15 +22,16 @@
     "test": "jest --watch"
   },
   "devDependencies": {
-    "@babel/cli": "^7.0.0-beta.49",
-    "@babel/core": "^7.0.0-beta.49",
-    "@babel/plugin-proposal-class-properties": "^7.0.0-beta.49",
-    "@babel/plugin-proposal-object-rest-spread": "^7.0.0-beta.49",
-    "@babel/preset-env": "^7.0.0-beta.49",
-    "@babel/preset-typescript": "^7.0.0-beta.49",
-    "typescript": "^2.9.1"
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.8.4",
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@babel/plugin-proposal-object-rest-spread": "^7.8.3",
+    "@babel/preset-env": "^7.8.4",
+    "@babel/preset-typescript": "^7.8.3",
+    "typescript": "^3.7.5"
   },
   "dependencies": {
-    "ts-jest": "^23.0.0"
+    "@types/jest": "^25.1.1",
+    "ts-jest": "^25.1.0"
   }
 }

@@ -1,8 +1,8 @@
-import { flattenThis, reduceArray } from './flattenArray';
-import { doesFuncExist } from '../doesFuncExist.test';
+import { doesFuncExist } from '../doesFuncExist.test'
+import { flattenThis, reduceArray } from './flattenArray'
 
 describe('flattenArray', () => {
-  doesFuncExist(flattenThis);
+  doesFuncExist(flattenThis)
 
   test('Takes a nested array of subarrays and flattens its contents into one array', () => {
     expect(flattenThis([1, [2, 3, [4, 5]], [6, 7]])).toEqual([
@@ -13,12 +13,12 @@ describe('flattenArray', () => {
       5,
       6,
       7
-    ]);
-  });
-});
+    ])
+  })
+})
 
 describe('reduceArray', () => {
-  doesFuncExist(reduceArray);
+  doesFuncExist(reduceArray)
 
   test('Takes a nested array of subarrays and reduces it into one array', () => {
     expect(reduceArray([1, [2, 3], [4, 5], [6, 7]])).toEqual([
@@ -29,6 +29,6 @@ describe('reduceArray', () => {
       5,
       6,
       7
-    ]);
-  });
-});
+    ])
+  })
+})
